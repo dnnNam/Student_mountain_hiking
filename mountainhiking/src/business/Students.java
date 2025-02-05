@@ -59,7 +59,7 @@ public class Students{
         
         String str = String.format(
           "  |------------------------------------------------------------------|\n" +
-          "  | Student ID |  Name       |  Phone      | Mountain     | Fee  \n" +
+          "  | Student ID |  Name         |  Phone      | Mountain     | Fee  \n" +
           "  |------------------------------------------------------------------|\n");
         String str1 = String.format(    
           "  |------------------------------------------------------------------|");
@@ -148,7 +148,6 @@ public class Students{
                     + "------------------------------------------------------",
                     st.getId(), st.getName(), st.getPhone(), st.getMoutainCode(),formattedFee );
             System.out.println(str); 
-                    
             String result = inp.getString("Are you sure you want to delete this registration? (Y/N): ");
             if(result.equalsIgnoreCase("y")){
                 stuList.remove(st);
@@ -234,7 +233,7 @@ public class Students{
             writer.flush(); // lưu rồi tắt
             this.isSaved = true;
         } catch (Exception e) {
-            System.out.println("File lỗi rồi nè " + e);
+            System.out.println("File lỗi rồi nè: " + e);
         }
     }
     

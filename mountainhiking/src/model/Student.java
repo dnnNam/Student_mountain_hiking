@@ -90,7 +90,7 @@ public class Student {
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedFee = formatter.format(tutionFee);
         
-        String str = String.format("%12s   | %-9s   | %-10s  | %8s     | %10s", 
+        String str = String.format("%12s   | %-12s   | %-10s  | %8s     | %10s", 
                 id , name, phone , moutainCode , formattedFee);
         return str;
     }

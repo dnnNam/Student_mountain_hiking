@@ -49,5 +49,7 @@ public class Statistics extends HashMap<String, StatisticalInfo> {
         }
         System.out.println(FOOTER_TABLE);
     }
+    
+    
        
 }

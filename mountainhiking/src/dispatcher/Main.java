@@ -44,7 +44,7 @@ public class Main {
                     Student st = null;
                     do {
                         id = inp.inputAndLoop("Input your id: ", Acceptable.STU_ID_VALID);
-                        st = studentManagement.searchById(id);
+                        st = studentManagement.searchById(id.toUpperCase());
                         if (st == null) {
                             isDup = true;
                         }
@@ -70,8 +70,8 @@ public class Main {
                 case 2: {
                     String id = "";
                     Student st = null;
-                    id = inp.inputAndLoop("Input your id wanna to update  : ", Acceptable.STU_ID_VALID);
-                    st = studentManagement.searchById(id);
+                    id = inp.inputAndLoop("Input your id wanna to update: ", Acceptable.STU_ID_VALID);
+                    st = studentManagement.searchById(id.toUpperCase());
                     if (st == null) {
                         System.out.println("This student has not registered yet");
                     } else {
