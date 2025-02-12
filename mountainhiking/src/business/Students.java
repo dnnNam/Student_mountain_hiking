@@ -58,11 +58,11 @@ public class Students{
         }
         
         String str = String.format(
-          "  |------------------------------------------------------------------|\n" +
-          "  | Student ID |  Name         |  Phone      | Mountain     | Fee  \n" +
-          "  |------------------------------------------------------------------|\n");
+          "  |-------------------------------------------------------------------------------|\n" +
+          "  | Student ID |          Name         |  Phone      | Peak Code     | Fee  \n" +
+          "  |-------------------------------------------------------------------------------|\n");
         String str1 = String.format(    
-          "  |------------------------------------------------------------------|");
+          "  |-------------------------------------------------------------------------------|");
         if(nameStu.isEmpty()){
             System.out.println("No one matches the search criteria!");
         }else{
@@ -112,11 +112,11 @@ public class Students{
     // hàm show các student 
     public void showAll(){
          String str = String.format(
-          "|-------------------------------------------------------------------------|\n" +
-          "|  Student ID  |   Name      |   Phone     |   Peak Code  |     Fee     \n" +
-          "|-------------------------------------------------------------------------|\n");
+          "|----------------------------------------------------------------------------------------|\n" +
+          "|  Student ID  |        Name           |   Phone     |   Peak Code  |     Fee     \n" +
+          "|----------------------------------------------------------------------------------------|\n");
            String str1 = String.format(    
-          "|-------------------------------------------------------------------------|");
+          "|----------------------------------------------------------------------------------------|");
         if(stuList.isEmpty()){
             System.out.println("No students have registered yet!!!");
         }else{
@@ -130,7 +130,7 @@ public class Students{
     // hàm xóa một sinh viên 
     public void delete(String id){
         // tìm cần sinh viên cần xóa 
-        Student st = searchById(id);
+        Student st = searchById(id.toUpperCase());
         // kiểm tra xem có sinh viên hay không 
         if(st == null){
             System.out.println("This student has not registered yet!!!");

@@ -47,6 +47,8 @@ public class Main {
                         st = studentManagement.searchById(id.toUpperCase());
                         if (st == null) {
                             isDup = true;
+                        } else {
+                            System.out.println("Data is invalid! Re-enter...");
                         }
                     } while (!isDup);
                     String name = inp.inputAndLoop("Input your name: ", Acceptable.NAME_VALID);
@@ -57,6 +59,9 @@ public class Main {
                     while (!isTrue) {
                         mountainCode = inp.getString("Input your mountain code: ");
                         isTrue = mn.isValidMountainCode(mountainCode);
+                        if (isTrue == false) {
+                            System.out.println("Data is invalid! Re-enter...");
+                        }
 
                     }
 
@@ -111,14 +116,20 @@ public class Main {
 
                     List<Student> stuListCampusCode = new ArrayList<>();
                     stuListCampusCode = studentManagement.filterByCampusCode(campusCode.toUpperCase());
-                    if(stuListCampusCode.isEmpty()){
+                    if (stuListCampusCode.isEmpty()) {
                         System.out.println("No student have registered under this campus");
-                    }else{
+                    } else {
+                        String str = String.format(
+                                "|----------------------------------------------------------------------------------------|\n"
+                                + "|  Student ID  |        Name           |   Phone     |   Peak Code  |     Fee     \n"
+                                + "|----------------------------------------------------------------------------------------|\n");
+                        System.out.println(str);
+
                         for (Student student : stuListCampusCode) {
                             System.out.println(student.toString());
                         }
                     }
-                   
+
                     break;
                 }
                 case 7: {
